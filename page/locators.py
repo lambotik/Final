@@ -15,3 +15,4 @@ class ProductPageLocators():
     NAME_PRODUCT_IN_BASKET = (By.XPATH, '//*[@id="messages"]/div[1]/div/strong')
     PRODUCT_IN_BASKET_PRICE = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
     PRICE_PRODUCT = (By.CSS_SELECTOR, '.col-sm-6.product_main .price_color')
+    SUCCESS_MESSAGE = (By.CLASS_NAME, 'alertinner')
