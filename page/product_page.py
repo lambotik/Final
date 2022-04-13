@@ -2,12 +2,13 @@ from .base_page import BasePage
 from .locators import MainPageLocators
 from .locators import ProductPageLocators
 from .locators import BasePageLocators
+from .locators import BasketPageLocators
 from selenium.common.exceptions import NoAlertPresentException # в начале файла
 import math
 
 class ProductPage(BasePage):
     def add_to_basket(self):
-        self.browser.find_element(*ProductPageLocators.BASKET).click()
+        self.browser.find_element(*ProductPageLocators.BASKET_ADD).click()
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
@@ -45,3 +46,17 @@ class ProductPage(BasePage):
             "Success message is not disappeared"
     def should_be_guest_can_go_to_login_page_from_product_page(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Гость не может перейти на страницу логина"
+
+    def should_be_login_link(self):
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+
+    def go_to_basket_page(self):
+        self.browser.find_element(*BasketPageLocators.BASKET).click()
+
+    def find_mesege_empty(self):
+        assert self.browser.find_element(*BasketPageLocators.EMPTY_BASKET), 'Корзина не пуста'
+
+
+    def find_all_products_page(self):
+        self.browser.find_element(*BasePageLocators.ALL_PRODUCTS_PAGE).click()
+

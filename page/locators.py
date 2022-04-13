@@ -16,8 +16,14 @@ class ProductPageLocators():
     PRODUCT_IN_BASKET_PRICE = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
     PRICE_PRODUCT = (By.CSS_SELECTOR, '.col-sm-6.product_main .price_color')
     SUCCESS_MESSAGE = (By.CLASS_NAME, 'alertinner')
-    BASKET = (By.CLASS_NAME, 'btn-add-to-basket')
+    BASKET_ADD = (By.CLASS_NAME, 'btn-add-to-basket')
+
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    ALL_PRODUCTS_PAGE = (By.CSS_SELECTOR, '[href="/en-gb/catalogue/"]')
+
+class BasketPageLocators():
+    BASKET = (By.CLASS_NAME, 'btn-group .btn-default')
+    EMPTY_BASKET = (By.CSS_SELECTOR, '#content_inner')
