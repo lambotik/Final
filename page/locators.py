@@ -2,8 +2,8 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLocators():
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    BASKET = (By.CLASS_NAME, 'btn-add-to-basket')
+    pass
+
 class LoginPagesLocators():
     LOGIN_URL = 'http://selenium1py.pythonanywhere.com/accounts/login/'
     LOGIN_FORM = (By.CSS_SELECTOR, '#login_form')
@@ -16,3 +16,8 @@ class ProductPageLocators():
     PRODUCT_IN_BASKET_PRICE = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
     PRICE_PRODUCT = (By.CSS_SELECTOR, '.col-sm-6.product_main .price_color')
     SUCCESS_MESSAGE = (By.CLASS_NAME, 'alertinner')
+    BASKET = (By.CLASS_NAME, 'btn-add-to-basket')
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
