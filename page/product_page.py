@@ -1,11 +1,8 @@
-from .base_page import BasePage
-from .locators import MainPageLocators
 from .locators import ProductPageLocators
 from .locators import BasePageLocators
+from selenium.common.exceptions import NoAlertPresentException
+from .base_page import BasePage
 from .locators import BasketPageLocators
-from .locators import LoginPagesLocators
-from selenium.common.exceptions import NoAlertPresentException # в начале файла
-import time
 import math
 
 class ProductPage(BasePage):
