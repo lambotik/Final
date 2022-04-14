@@ -3,7 +3,9 @@ from .locators import MainPageLocators
 from .locators import ProductPageLocators
 from .locators import BasePageLocators
 from .locators import BasketPageLocators
+from .locators import LoginPagesLocators
 from selenium.common.exceptions import NoAlertPresentException # в начале файла
+import time
 import math
 
 class ProductPage(BasePage):
@@ -56,7 +58,8 @@ class ProductPage(BasePage):
     def find_mesege_empty(self):
         assert self.browser.find_element(*BasketPageLocators.EMPTY_BASKET), 'Корзина не пуста'
 
-
     def find_all_products_page(self):
         self.browser.find_element(*BasePageLocators.ALL_PRODUCTS_PAGE).click()
+
+
 
