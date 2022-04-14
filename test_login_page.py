@@ -1,7 +1,10 @@
-from page.main_page import MainPage
+from page.base_page import BasePage
 from page.login_page import LoginPage
-from selenium.webdriver.common.by import By
-from page.locators import MainPageLocators
+from page.product_page import ProductPage
+from page.basket_page import BasketPage
+from page import locators
+from page.main_page import MainPage
+
 
 def go_to_login_page(self):
     link = self.browser.find_element_by_css_selector("#login_link")

@@ -1,14 +1,10 @@
 import pytest
-from page.main_page import MainPage
-from page.login_page import LoginPage
 from page.base_page import BasePage
-from selenium.webdriver.common.by import By
-from page.locators import MainPageLocators
+from page.login_page import LoginPage
+from page.product_page import ProductPage
 from page.basket_page import BasketPage
-from page.base_page import BasePageLocators
-
-
-
+from page import locators
+from page.main_page import MainPage
 
 
 @pytest.mark.login_guest
